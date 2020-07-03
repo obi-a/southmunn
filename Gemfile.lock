@@ -6,14 +6,20 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    backports (3.18.1)
     coderay (1.1.3)
     contracts (0.16.0)
+    daru (0.1.6)
+      backports
     diff-lcs (1.4.4)
     method_source (0.9.2)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    rake (10.5.0)
+    rake (13.0.1)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -27,6 +33,9 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
+    yquotes (2.1.0)
+      daru (~> 0.1.5)
+      nokogiri (~> 1)
 
 PLATFORMS
   ruby
@@ -35,9 +44,10 @@ DEPENDENCIES
   bundler (~> 1.7)
   contracts (~> 0.16.0)
   pry (~> 0.12.2)
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec (~> 3.0)
   southmunn!
+  yquotes
 
 BUNDLED WITH
    1.17.2
