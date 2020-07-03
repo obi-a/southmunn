@@ -1,0 +1,13 @@
+version: '3'
+services:
+  southmunn:
+    build: .
+    volumes:
+      - .:/usr/src/southmunn
+    entrypoint: bundle exec rake repl
+
+  southmunn_tests:
+    build: .
+    volumes:
+      - .:/usr/src/southmunn
+    entrypoint: bundle exec rspec -fd spec
